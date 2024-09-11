@@ -1,0 +1,6 @@
+.container {
+}
+
+.container > img {
+  width: 100%;
+}

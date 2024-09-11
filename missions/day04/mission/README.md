@@ -11,7 +11,7 @@
    - 여러장 올리셔도 됩니다!
 2. GitHub에 프로젝트 업로드 후 링크로 공유
 
-> [정답 보기](https://github.com/winterlood/onebite-next-challenge/blob/main/missions/day02/mission/answer)
+> [정답 보기](https://github.com/winterlood/onebite-next-challenge/blob/main/missions/day04/mission/answer)
 
 ## 미션 소개) 한입 씨네마 레이아웃 설정하기
 
