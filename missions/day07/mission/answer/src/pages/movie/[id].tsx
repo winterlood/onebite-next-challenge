@@ -8,7 +8,9 @@ export const getStaticPaths = async () => {
   const movies = await fetchMovies();
   return {
     // 모든 영화 페이지를 미리 생성하도록 설정했습니다.
-    paths: movies.map(({ id }) => ({ params: { id } })),
+    paths: movies.map(({ id }) => ({
+      params: { id: id.toString() },
+    })),
     fallback: true,
   };
 };
@@ -39,7 +41,6 @@ export default function Page({
 
   if (router.isFallback) return "로딩중입니다";
   if (!movie) return "문제가 발생했습니다 다시 시도하세요";
-
   const {
     id,
     title,
@@ -48,6 +49,8 @@ export default function Page({
     runtime,
     description,
     posterImgUrl,
+    releaseDate,
+    genres,
   } = movie;
 
   return (
@@ -58,12 +61,21 @@ export default function Page({
       >
         <img src={posterImgUrl} />
       </div>
-      <div className={style.title}>{title}</div>
-      <div className={style.subTitle}>{subTitle}</div>
-      <div className={style.author}>
-        {company} | {runtime}
+
+      <div className={style.info_container}>
+        <div>
+          <h2>{title}</h2>
+          <div>
+            {releaseDate} / {genres.join(", ")} / {runtime}분
+          </div>
+          <div>{company}</div>
+        </div>
+
+        <div>
+          <div className={style.subTitle}>{subTitle}</div>
+          <div className={style.description}>{description}</div>
+        </div>
       </div>
-      <div className={style.description}>{description}</div>
     </div>
   );
 }

@@ -6,8 +6,7 @@
 
 미션 제출은 다음 방법중 하나를 선택하시면 됩니다.
 
-1. 결과 화면 캡쳐
-2. GitHub에 프로젝트 업로드 후 링크로 공유
+1. 스크린샷 or GitHub를 이용한 코드 제출 + 이점 및 근거 작성
 
 > [정답 보기](https://github.com/winterlood/onebite-next-challenge/blob/main/missions/day07/mission/answer)
 
