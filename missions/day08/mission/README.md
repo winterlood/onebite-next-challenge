@@ -31,4 +31,8 @@
 파비콘 및 썸네일 파일은 아래의 링크에서 다운로드 하실 수 있습니다.  
 만약 원하시는 디자인이 있다면 자유롭게! 원하시는 파일 이용하셔도 됩니다.
 
-[파비콘 및 썸네일 다운로드 링크](TODO)
+[파비콘 및 썸네일 압축 파일 다운로드 링크](https://github.com/winterlood/onebite-next-challenge/blob/main/assets/onebite-cinema.zip)
+
+> 우측 상단의 다운로드 아이콘을 누르시면 압축 파일을 다운받으실 수 있어요!
+
+![alt text](image.png)
