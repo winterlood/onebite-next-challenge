@@ -13,7 +13,7 @@
 
 2. GitHub에 프로젝트 업로드 후 링크로 공유
 
-> [정답 보기](https://github.com/winterlood/onebite-next-challenge/blob/main/missions/day12/mission/answer)
+> [정답 보기](https://github.com/winterlood/onebite-next-challenge/blob/main/missions/day13/mission/answer)
 
 ## 미션 소개) 한입-씨네마 풀라우트 캐시 적용하기
 
