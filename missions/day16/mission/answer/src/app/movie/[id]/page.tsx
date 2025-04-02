@@ -14,12 +14,9 @@ export async function generateStaticParams() {
 }
 
 async function MovieDetail({ movieId }: { movieId: string }) {
-  const response = await fetch(
-    `http://localhost:12345/movie/${movieId}`,
-    {
-      cache: "force-cache",
-    }
-  );
+  const response = await fetch(`http://localhost:12345/movie/${movieId}`, {
+    cache: "force-cache",
+  });
 
   if (!response.ok) {
     return <div>오류가 발생했습니다...</div>;
@@ -63,9 +60,7 @@ async function MovieDetail({ movieId }: { movieId: string }) {
 }
 
 async function ReviewList({ movieId }: { movieId: string }) {
-  const response = await fetch(
-    `http://localhost:12345/review/movie/${movieId}`
-  );
+  const response = await fetch(`http://localhost:12345/review/movie/${movieId}`);
 
   if (!response.ok) {
     throw new Error(`Review fetch failed : ${response.statusText}`);
@@ -82,16 +77,13 @@ async function ReviewList({ movieId }: { movieId: string }) {
   );
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   return (
     <div className={style.container}>
-      <MovieDetail movieId={params.id} />
-      <ReviewEditor movieId={params.id} />
-      <ReviewList movieId={params.id} />
+      <MovieDetail movieId={id} />
+      <ReviewEditor movieId={id} />
+      <ReviewList movieId={id} />
     </div>
   );
 }

@@ -11,16 +11,13 @@ export async function generateStaticParams() {
   return movies.map(({ id }) => ({ id: id.toString() }));
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { id: string | string[] };
-}) {
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+
   /* 상세페이지의 정보가 변경되지 않을 것이므로 force-cache 적용 */
-  const response = await fetch(
-    `http://localhost:12345/movie/${params.id}`,
-    { cache: "force-cache" }
-  );
+  const response = await fetch(`http://localhost:12345/movie/${id}`, {
+    cache: "force-cache",
+  });
 
   if (!response.ok) {
     return <div>오류가 발생했습니다...</div>;
