@@ -1,10 +1,10 @@
-.conatiner {
+.container {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-.reco_conatiner {
+.reco_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
