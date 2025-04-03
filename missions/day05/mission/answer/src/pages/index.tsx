@@ -7,10 +7,10 @@ import movies from "@/dummy.json";
 
 export default function Home() {
   return (
-    <div className={style.conatiner}>
+    <div className={style.container}>
       <section>
         <h3>지금 가장 추천하는 영화</h3>
-        <div className={style.reco_conatiner}>
+        <div className={style.reco_container}>
           {movies.slice(0, 3).map((movie) => (
             <MovieItem key={`recomovie-${movie.id}`} {...movie} />
           ))}
